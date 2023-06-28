@@ -1,0 +1,27 @@
+<%- include("header.ejs") -%>
+    <div class="box" id="heading">
+       <h1><%= kindOfDay %> todo list!</h1>
+    </div>
+     <div class="box">
+  
+   
+      <%  for(var  i=0;i<newItem.length;i++) {    %>
+        <div class="item">
+            <input type="checkbox">
+            <p> <%= newItem[i] %> </p>
+        </div>  
+        <%   }  %>
+    
+    
+    <form action="/" method="post">
+       
+        <input type="text" name="todo" placeholder="New item" autocomplete="off">
+        <button type="submit" >+</button>
+       
+    </form>
+ 
+
+     </div>
+    
+     <%- include("footer.ejs") -%>
+ 
